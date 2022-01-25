@@ -5,7 +5,7 @@ ARG WAR_FILE=target/*.war
 
 ADD ${WAR_FILE} /usr/local/tomcat/webapps/
 
-EXPOSE 8085
+EXPOSE 80
 CMD ["catalina.sh", "run"]
 
 # ARG WILDFLY_NAME
