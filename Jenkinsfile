@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Test Integration') {
             steps {
-                sh 'wget -m http://localhost:8085/app-web-demo'
+                sh 'wget -m http://localhost:8085/app-web-demo/'
             }
         }
     }
