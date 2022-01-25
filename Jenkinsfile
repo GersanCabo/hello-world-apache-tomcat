@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Test Integration') {
             steps {
-                sh 'wget -m http://172.17.0.1:8085'
+                sh 'wget -m http://localhost:8085'
             }
         }
     }
