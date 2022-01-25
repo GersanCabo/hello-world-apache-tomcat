@@ -14,12 +14,12 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'docker build -t hello-world-apache-tomcat .'
-                sh 'docker run -d --rm -p 80:80 hello-world-apache-tomcat'
+                sh 'docker run -d --rm -p 8085:8080 hello-world-apache-tomcat'
             }
         }
         stage('Test Integration') {
             steps {
-                sh 'wget -m http://172.17.0.2'
+                sh 'wget -m http://172.17.0.2:8085'
             }
         }
     }
